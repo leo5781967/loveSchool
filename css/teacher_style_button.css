@@ -1,0 +1,135 @@
+.select_button {
+	font-family: "微軟正黑體";
+	background-color: #5976b7;
+	height: 33px;
+	width: 100px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	color: #FFF;
+	border-radius: 5px;
+	font-size:14px;
+	
+}
+.select_button:hover {
+	background-color: #465c8e;
+	height: 35px;
+	font-size:16px;
+}
+
+
+.insert_button {
+	font-family: "微軟正黑體";
+	background-color: #5dce84;
+	height: 33px;
+	width: 100px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	color: #FFF;
+	border-radius: 5px;
+	font-size:14px;
+}
+.insert_button:hover {
+	background-color: #539068;
+	height: 35px;
+	font-size:16px;
+}
+
+.return_back {
+		font-family: "微軟正黑體";
+		background-color: #46A3FF;
+		height: 33px;
+		width: 100px;
+		border-top-style: none;
+		border-right-style: none;
+		border-bottom-style: none;
+		border-left-style: none;
+		color: #FFF;
+		border-radius: 5px;
+		font-size:14px;
+		cursor:pointer;
+	}
+	.return_back:hover{
+		background-color: #0080FF;
+		height: 35px;
+		font-size:16px;
+		cursor:pointer;
+	}
+
+
+.submit_button {
+	font-family: "微軟正黑體";
+	background-color: #FF4040;
+	height: 33px;
+	width: 100px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	color: #FFF;
+	border-radius: 5px;
+	font-size:14px;
+}
+.submit_button:hover {
+	background-color: #E80000;
+	height: 35px;
+	font-size:16px;
+}
+.other_button {
+	font-family: "微軟正黑體";
+	background-color: #eaae45;
+	height: 33px;
+	width: 100px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	color: #FFF;
+	border-radius: 5px;
+	font-size:14px;
+}
+.other_button:hover {
+	background-color: #d1890a;
+	height: 35px;
+	font-size:16px;
+}
+
+/*th{
+	background-color: #517da2;
+	color:#ffffff;
+	font-size:18px;
+	height:40px;
+	text-align:center;
+}
+*/
+/**//*td:hover{
+	background-color: #ecf0f1;
+}
+
+#td_end{
+	height:0px;
+}
+table{
+	box-shadow: 10px 10px 6px 1px #cccccc;
+}
+tr{
+	border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #c2d5e8;
+}
+select{
+	font-family: "微軟正黑體";
+	width: 190px;
+    height: 35px;
+    padding: 0px 15px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #2c3e50;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #dce4ec;
+    border-radius: 4px;
+}*/

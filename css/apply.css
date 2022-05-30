@@ -1,0 +1,121 @@
+.fancytable{
+	border:1px solid #cccccc;
+	width:70%;
+	border-collapse:collapse;
+	
+}
+.fancytable td{
+	border:1px solid #504d9a;
+	color:#555555;
+	text-align:center;
+	line-height:28px;
+	padding:5px;
+	
+}
+.fancytable tr{
+	border: 1px solid #504d9a;
+}
+
+.headerrow{ background-color:#6c85b5;font-size: large;border: 1px solid #504d9a;}
+.headerrow td{ color:#000000; text-align:center;font-family: "微軟正黑體";}
+.datarowodd td{background-color:#ffffff;font-family: "微軟正黑體";}
+.dataroweven td{ background-color:#efefef;font-family: "微軟正黑體";}
+
+/*==============================test===================*/
+/*第一欄第一列：左上*/
+tr:first-child td:first-child{
+	border-top-left-radius: 10px;
+}
+/*第一欄最後列：左下*/
+tr:last-child td:first-child{
+	border-bottom-left-radius: 10px;
+}
+/*最後欄第一列：右上*/
+tr:first-child td:last-child{
+	border-top-right-radius: 10px;
+}
+/*最後欄第一列：右下*/
+tr:last-child td:last-child{
+	border-bottom-right-radius: 10px;
+}
+/*==============================test===================*/			
+.bg{
+	display: none; 
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 200%;
+	height: 100%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 0.7;
+	opacity:.70;
+	filter: alpha(opacity=70);
+}
+.show{
+	display: none;  
+	position: absolute;  
+	top: 20%;  
+	left: 25%;  
+	width: 50%;  
+	height: 70%;  
+	padding: 8px;  
+	border: 8px solid #a1a4c5; 
+	position:fixed;  
+	background-color: #DDDDDD;   
+	z-index:1002;  
+	overflow: auto;
+	//cursor: pointer; 
+	//background-image:url(image/cc.jpg);
+	background-size:100% 100%
+}
+.show::-webkit-scrollbar {
+	display: none;
+}
+
+.btn{
+	cursor: pointer;
+}
+
+.change1 {
+	
+	box-shadow: 0px 0px 0px 2px #ff9999;
+	background:linear-gradient(to bottom, #ff3333 5%, #e60000 100%);
+	background-color:#ff3333;
+	border-radius:10px;
+	border:1px solid #e62e00;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+}
+
+.change1 span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.change1 span:after {
+	content: '»';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.change1:hover span {
+	padding-right: 25px;
+	
+}
+
+.change1:hover span:after {
+	opacity: 1;
+	right: 0;
+}

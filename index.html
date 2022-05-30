@@ -1,0 +1,136 @@
+<html>
+	<head>
+		<title>康寧大學-愛校管理系統</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/style_index.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/font-awesome_index.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/new_index.css" rel="stylesheet" type="text/css" media="all" />
+		<style>
+			.login100-pic img {
+				max-width: 40%;
+			}
+			.bg{
+				display: none; 
+				position: absolute;
+				top: 0%;
+				left: 0%;
+				width: 100%;
+				height: 100%;
+				background-color: black;
+				z-index:1001;
+				-moz-opacity: 0.7;
+				opacity:.70;
+				filter: alpha(opacity=70);
+			}
+			.show{
+				display: none;  
+				position: absolute;  
+				top: 20%;  
+				left: 25%;  
+				width: 50%;  
+				height: 50%;  
+				padding: 8px;  
+				border: 8px solid #E8E9F7; 
+				position:fixed;  
+				background-color: #DDDDDD;   
+				z-index:1002;  
+				overflow: auto;
+				cursor: pointer; 
+				//background-image:url(image/cc.jpg);
+				background-size:100% 100%
+			}
+		</style>
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/tilt.jquery.min.js"></script>
+		<script>
+			function line_img(){
+				document.getElementById("line").style.display = 'block';
+				document.getElementById("bg").style.display = 'block';
+			}
+			function show(){
+				//location.href="main.html";
+				var acc=document.getElementById("acc").value;
+				var pwd=document.getElementById("pwd").value;
+				//===============================================判斷權限(暫不啟用)===========
+				/*if(acc=="" || pwd==""){
+					alert("請輸入帳號或密碼!!");
+					return false;
+				}else{
+					$.ajax({
+						url: 'login.php',
+						type: 'post',
+						data:{user_acc:acc,user_pwd:pwd},
+						success: function(result){
+							$("#log").html(result);
+						}
+					});
+				}*/
+				//===========================================================================
+				if(acc==""){
+					alert("請輸入帳號!!");
+					return false;
+				}else{
+					$.ajax({
+						url: 'login.php',
+						type: 'post',
+						data:{user_acc:acc},
+						success: function(result){
+							$("#log").html(result);
+						}
+					});
+				}
+				//===========================================================================
+			}
+			function hide(){
+				document.getElementById("bg").style.display = 'none';
+				document.getElementById("log").style.display = 'none';
+				document.getElementById("line").style.display = 'none';
+			}
+			function key() { 
+				if(event.keyCode ==13) 
+				show(); 
+			} 
+		</script>
+	</head>
+	<body onkeydown="key();">
+		<div id="bg" class='bg' onclick='hide();'></div>
+		<div id="log" style="display: none;" class='show'></div>
+		<div class="body"></div>
+		<div class="grad"></div>
+		<div class="header" align="left">
+			
+			<div class="login100-pic js-tilt">
+				<center><img src="images/ukn.png" alt="IMG">
+				<h1>康 寧 大 學</br>愛校管理系統</h1></center>
+			</div></br>
+
+		</div>
+		<br>
+		<div class="login">
+			
+			<div class="icon1">
+				<span class="fa fa-user"></span>
+				<input type="text" id="acc" placeholder="User Account"/>
+			</div>
+			<div class="icon1">
+				<span class="fa fa-lock"></span>
+				<input type="password" id="pwd" placeholder="User Password"/>
+			</div>
+			<input type="button" onclick="show();" value="登入">
+			<div class="copyright">
+				<p>技術指導：資圖中心 陳宗騰主任</p>
+				<p>資訊管理科 | 王致鈞 王譯璟 洪浩軒 王景瀚 </p>
+				<p>協助開發</p>
+			</div>
+		</div>
+
+
+	</body>
+
+	<script>
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+</html>

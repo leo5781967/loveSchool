@@ -1,0 +1,98 @@
+body {
+  background: #000;
+}
+#Main {
+	width: 600px;
+	text-align: center;
+	margin: 0 auto;
+}
+table {
+	width: 100%;
+	font-size:18px;
+	border-collapse: collapse;
+	text-align: left;
+	/*margin: 10px 5px 5px 10px;*/
+	cursor: default;
+	border: 1px solid #ccc;
+	/*margin-top:20px;*/
+	box-shadow: 0px 0px 10px rgba(0,255,255,0.75);
+	border: 1px solid rgba(127,255,255,0.75);
+	-webkit-box-shadow: 0px 0px 8px rgba(0,255,255,0.75);
+	-moz-box-shadow: 0px 0px 8px rgba(0,255,255,0.75);
+	box-shadow: 0px 0px 8px #8ca5f7;
+}
+
+.tbTitle>th {
+	font-weight: 300;
+	text-align: center;
+	padding: 10px 0 10px 0;
+	font: 18px "微软雅黑", Arial, Helvetica, sans-serif;
+	background-color: rgba(0,93,93,0.8);
+	color: #efefef;
+	text-shadow: 0px 0px 20px rgba(127,255,255,1);
+}
+th, td {
+	border: 1px solid #a7b4ff;
+	text-align:center;
+	color: #FFFFFF;
+}
+.tbContext:hover {
+	background-color: rgba(0,99,99,0.9) !important;
+}
+td,td>a {
+	font: 20px "微软雅黑", Arial, Helvetica, sans-serif;
+	text-align: center;
+	padding: 6px 0 6px 0;
+	//color: rgba(128,255,255,0.75);
+	//text-shadow: 0px 0px 20px rgba(0,255,255,0.75);/*-webkit-filter: drop-shadow(0px 0px 20px rgba(0,255,255,0.95));
+	-moz-filter: drop-shadow(0px 0px 20px rgba(0,255,255,0.95));
+	-o-filter: drop-shadow(0px 0px 20px rgba(0,255,255,0.95));
+	-ms-filter: drop-shadow(0px 0px 20px rgba(0,255,255,0.95));
+	filter: drop-shadow(0px 0px 20px rgba(0,255,255,0.95));*/
+}
+.tbContext:nth-child(2n 1) {
+	background-color: rgba(0,127,127,0.1);
+}
+/*button*/
+.button {
+	width: 146px;
+    height: 52px;
+    /*background-color: transparent;*/
+	background-color: rgba(124, 123, 150, 0.8);
+    border-radius: 4px;
+    border: 0;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+    color: #ffffff !important;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 300;
+    height: 3em;
+    line-height: 3em;
+    padding: 0 2.25em;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+	/*font-size:18px;
+	position: fixed;*/
+    font: 19px "微软雅黑", Arial, Helvetica, sans-serif;
+}
+.button:hover {
+	width: 146px;
+    height: 52px;
+    /*background-color: transparent;*/
+	background-color: rgba(124, 123, 150, 0.8);
+    border-radius: 4px;
+    border: 0;
+    box-shadow: inset 0 0 0 1px rgb(136, 144, 208);
+    color: #b1bbf7 !important;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 300;
+    height: 3em;
+    line-height: 3em;
+    padding: 0 2.25em;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+	font-size:18px;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zxx">
+	<head>
+		<title>康寧大學-愛校服務系統</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8" />
+		<script src="js/jquery.min.v3.js"></script>
+		<script>
+			function dis(){
+				if(document.getElementById("menu1").style.display=="none"){
+					document.getElementById("menu1").style.display="block";
+				}else{
+					document.getElementById("menu1").style.display="none";
+				}
+			}
+			function switch_div(){
+				$.ajax({
+					url: 'table.html',
+					type: 'post', 
+					success: function(result){
+						$("#div2").html(result);
+					}
+				});
+			}
+			switch_div();
+		</script>
+		<style>
+			
+			.qq {
+				position: fixed;
+				z-index: 100;
+				background-color: #fff!important;
+			}
+			.pp {
+				margin-top: 1em;
+				margin-right: 0px;
+			}
+			#menu1 {
+				text-align-last: center;
+			}
+			#div1{
+				//line-height:50px;
+				padding:10% 13%;
+				border:2px blue solid;
+				margin-left:150px;
+				margin-top: 3%;
+				float:left;
+			}
+			#div2{
+				width:50%;
+				padding:0% 1%;
+				border:2px green solid;
+				margin-top: 5%;
+				margin-right:100px;
+				float:right;
+			   
+			}
+		@media all and (max-width:768px) {
+			
+			#div1{
+				//line-height:50px;
+				padding:10% 13%;
+				border:2px blue solid;
+				margin-left:150px;
+				margin-top: 3%;
+				float:left;
+			}
+			#div2{
+				width:50%;
+				padding:0% 1%;
+				border:2px green solid;
+				margin-top: 5%;
+				margin-right:100px;
+				float:right;
+			   
+			}
+		}
+		</style>
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link href="css/font-awesome.css" rel="stylesheet">
+	</head>
+	<body>
+		<!-- mian-content -->
+		<section class="main-content" id="home">
+			<!-- /header -->
+			<header>
+				<div class="container-fluid px-lg-5 px-3 qq">
+					<!-- nav -->
+					<nav class="py-2 d-lg-flex">
+						<div id="logo1" style="width:20%">
+							<h1>
+								<a class="navbar-brand1" href="index.html">
+									<img src="images/ukn.png" alt="IMG" width="50px" height="50px" />
+									愛校服務系統
+								</a>
+							</h1>
+						</div>
+						<div id="logo1" style="position: absolute;left: 35%;">
+							<h2 id="h2">
+								<a class="navbar-brand1 pp">
+									資訊管理科｜林昊霆 同學
+								</a>
+							</h2>
+						</div>
+						<label for="drop" class="toggle" onclick="dis();">Menu</label>
+						<input type="checkbox" id="drop" />
+						<ul class="menu ml-auto" id="menu1">
+							<li class="active"><a href="index.html">首頁</a></li>
+							<li><a href="about.html">申請</a></li>
+							<li><a href="#" onclick="switch_div();">預約（5）</a></li>
+							<li>
+								<!-- First Tier Drop Down -->
+								<label for="drop-2" class="toggle">管理 <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
+								<a href="#">管理 <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+								<input type="checkbox" id="drop-2" />
+								<ul class="inner-ul">
+									<li><a href="#gallery">紀錄</a></li>
+									<li><a href="#stats">Stats</a></li>
+									<li><a href="#posts">積欠時數</a></li>
+								</ul>
+							</li>
+							<li><a href="index.html">登出</a></li>
+						</ul>
+					</nav>
+					<!-- //nav -->
+				</div>
+			</header>
+			<!-- //header -->
+			</br></br></br>
+			<div class="csslider infinity" id="main_div">
+				<div id="div1">
+					公告欄
+				</div>	
+				<div id="div2">
+					當日預約工作
+				</div>
+				
+			</div>
+		</section>
+	</body>
+</html>
